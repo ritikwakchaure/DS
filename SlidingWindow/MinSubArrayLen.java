@@ -6,6 +6,7 @@ public class MinSubArrayLen {
         int minL = Integer.MAX_VALUE;
 
         while (j < nums.length) {
+            
             sum += nums[j];
 
             while (sum >= target) {
@@ -22,7 +23,7 @@ public class MinSubArrayLen {
 
     public static void main(String[] args) {
 
-        int[] nums = { 1, 4, 4,4,7,7,5 };
+        int[] nums = { 1, 4, 4,4 };
         int target = 4;
 
         int result = minSubArrayLen(target, nums);

@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class LongestSubarrays {
+class LongestSubarrays {
 
     public static int longestSubarray(int[] a) {
         int one = 0, zero = 0, res = 0;
@@ -12,10 +12,13 @@ public class LongestSubarrays {
             // Count 1s and 0s
             if (a[i] == 1) {
                 one++;
+
             } else {
                 zero++;
             }
+            
 
+            
             int diff = one - zero;
 
             // Case 1: equal from start
