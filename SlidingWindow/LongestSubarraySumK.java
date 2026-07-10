@@ -31,3 +31,4 @@ public class LongestSubarraySumK {
         System.out.println("Length of longest subarray with sum " + k + " = " + result);
     }   
 }
+

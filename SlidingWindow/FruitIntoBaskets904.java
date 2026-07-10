@@ -1,0 +1,34 @@
+import java.util.HashMap;
+
+// LeetCode 904 - Fruit Into Baskets
+// Longest subarray with at most 2 distinct elements
+public class FruitIntoBaskets904 {
+    public static int totalFruit(int[] fruits) {
+        HashMap<Integer, Integer> basket = new HashMap<>();
+        int left = 0;
+        int maxFruits = 0;
+
+        for (int right = 0; right < fruits.length; right++) {
+            basket.put(fruits[right], basket.getOrDefault(fruits[right], 0) + 1);
+
+            // shrink when more than 2 fruit types in window
+            while (basket.size() > 2) {                int leftFruit = fruits[left];
+                basket.put(leftFruit, basket.get(leftFruit) - 1);
+                if (basket.get(leftFruit) == 0) {
+                    basket.remove(leftFruit);
+                }
+                left++;
+            }
+
+            maxFruits = Math.max(maxFruits, right - left + 1);
+        }
+
+        return maxFruits;
+    }
+
+    public static void main(String[] args) {
+        int[] fruits = { 1, 2, 1, 2, 3, 2, 2 };
+
+        System.out.println("Maximum fruits: " + totalFruit(fruits));
+    }
+}
