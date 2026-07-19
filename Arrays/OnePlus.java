@@ -1,7 +1,11 @@
+import static java.io.IO.println;
 import java.util.Arrays;
 
+// 66. Plus One
+// 
+
 class OnePlus {
-    public int[] plusOne(int[] digits) {
+    public static  int[] plusOne(int[] digits) {
 
         int n = digits.length - 1;
 
@@ -23,14 +27,14 @@ class OnePlus {
 
     }
 
-    public static void main(String[] args) {
+     void main() {
 
          
         int[] digits = {9, 9, 9};
 
         int[] answer = plusOne(digits);
 
-        System.out.println(Arrays.toString(answer));
+        println(Arrays.toString(answer));
 
     }
 }

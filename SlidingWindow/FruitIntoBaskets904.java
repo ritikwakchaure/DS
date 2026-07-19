@@ -26,7 +26,7 @@ public class FruitIntoBaskets904 {
         return maxFruits;
     }
 
-    public static void main(String[] args) {
+    void main(String[] ar) {
         int[] fruits = { 1, 2, 1, 2, 3, 2, 2 };
 
         System.out.println("Maximum fruits: " + totalFruit(fruits));

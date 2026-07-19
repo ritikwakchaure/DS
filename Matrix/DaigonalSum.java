@@ -14,9 +14,10 @@ int sum=0;
     
     sum = sum+ mat[i][n-i-1] ;
 
+
     if(n % 2 == 0){
-        
-    }
+
+    }+
 }
 
 return sum;
