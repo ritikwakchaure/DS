@@ -14,17 +14,30 @@ class Rearrange {
 
         int left = 0;
         int right = nums.length - 1;
-        for (int i = 0; i < nums.length; i++) {
+        int index = 0;
+        while (left < right) {
 
-            if (i % 2 == 0) {
-                temp[i] = nums[right--];
+            if (left < right) {
+                temp[index++] = nums[right--];
+                temp[index++] = nums[left++];
 
             } else {
-
-                temp[i] = nums[left++];
+                temp[index++] = nums[left++];
 
             }
+
         }
+        // for (int i = 0; i < nums.length; i++) {
+
+        // if (i % 2 == 0) {
+        // temp[i] = nums[right--];
+
+        // } else {
+
+        // temp[i] = nums[left++];
+
+        // }
+        // }
 
         for (int i = 0; i < temp.length; i++) {
             nums[i] = temp[i];
