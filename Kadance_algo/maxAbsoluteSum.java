@@ -1,22 +1,21 @@
 class maxAbsoluteSum {
 
-    //
     // bf
-    // public static int maxAbsoluteSum(int nums[]) {
-    // int ans = 0;
-    // for (int i = 0; i < nums.length; i++) {
-    // int sum = 0;
+    public static int maAbsoluteSum(int nums[]) {
+        int ans = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int sum = 0;
 
-    // for (int j = i; j < nums.length; j++) {
+            for (int j = i; j < nums.length; j++) {
 
-    // sum += nums[j];
+                sum += nums[j];
 
-    // ans = Math.max(ans, Math.abs(sum));
+                ans = Math.max(ans, Math.abs(sum));
 
-    // }
-    // }
-    // return ans;
-    // }
+            }
+        }
+        return ans;
+    }
 
     public static int maxAbsoluteSum(int nums[]) {
         int maxCurrent = nums[0];
