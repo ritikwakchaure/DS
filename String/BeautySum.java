@@ -20,6 +20,7 @@ public class BeautySum {
                 if (count[k] > 0) {
                     min = Math.min(min, count[k]);
                     max = Math.max(max, count[k]);
+                    System.out.println("Hello");
                 }
             }
 
