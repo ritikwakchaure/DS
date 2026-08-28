@@ -21,6 +21,7 @@ public class BeautySum {
                     min = Math.min(min, count[k]);
                     max = Math.max(max, count[k]);
                     System.out.println("Hello");
+                    System.out.println("Jay ganesh");
                 }
             }
 
